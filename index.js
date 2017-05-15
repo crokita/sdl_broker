@@ -1,5 +1,12 @@
 var http = require('http');
-var server = http.createServer(function(request, response) {});
+var server = http.createServer(function(request, response) {
+    response.write('<html>');
+    response.write('<body>');
+    response.write('<h1>Hello, you beautiful person!</h1>');
+    response.write('</body>');
+    response.write('</html>');
+    response.end();
+});
 var WebSocketServer = require('websocket').server;
 var WebSocketClient = require('websocket').client;
 
